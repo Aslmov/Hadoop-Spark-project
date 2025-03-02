@@ -193,8 +193,6 @@ Ouvrir le fichier pom.xml automatiquement créé, et ajouter les dépendances su
         </dependencies>
     </project>
 
-
-
 # Référence
 
 Travaux Pratiques Big Data GL4 - INSAT : https://insatunisia.github.io/TP-BigData/
