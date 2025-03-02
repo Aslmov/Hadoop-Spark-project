@@ -28,9 +28,13 @@ La version Linux utilisé est : Ubuntu 24.10 sur machine virtuelle
 
 1 - Installer Docker
 
+Lien officiel pour installer Docker(https://docs.docker.com/desktop/setup/install/linux/ubuntu/#install-docker-desktop)
+
 Télécharger l'image docker uploadée sur dockerhub:
 
     docker pull liliasfaxi/hadoop-cluster:latest
+
+![Capture d’écran](https://github.com/user-attachments/assets/f4d74696-20b4-4cb4-ab8c-bd33bd292b15)
 
 2 - Création des trois contenaires à partir de l'image téléchargée 
 
@@ -38,6 +42,8 @@ Télécharger l'image docker uploadée sur dockerhub:
 2.1 - Créer un réseau qui permettra de relier les trois contenaires
 
     docker network create --driver=bridge hadoop
+
+![Capture d’écran](https://github.com/user-attachments/assets/be13043c-29c4-491e-9b0a-0f5332c3f694)
 
 
 2.2 - Créer et lancer les trois contenaires 
@@ -50,8 +56,13 @@ les instructions -p permettent de faire un mapping (diriger des données ou les 
     
     docker run -itd -p 8041:8042 --net=hadoop --name hadoop-worker2 --hostname hadoop-worker2 liliasfaxi/hadoop-cluster:latest
 
+![Capture d’écran ](https://github.com/user-attachments/assets/4252fa90-1d87-4f3d-8d26-fe27389dce44)
 
-2.3 - Vérifier que les trois contenaires tournent bien en lançant la commande docker ps. Un résultat semblable au suivant devra s'afficher
+
+2.3 - Vérifier les trois contenaires 
+
+ Vérifier que les trois contenaires tournent bien en lançant la commande docker ps. Un résultat semblable au suivant devra s'afficher:
+ ![Capture d’écran ](https://github.com/user-attachments/assets/95670f79-5bd8-4989-8e69-b8b77c0b8f96)
 
 
 3 - Entrer dans le contenaire master pour commencer à l'utiliser.
